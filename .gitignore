@@ -1,0 +1,53 @@
+# === C++ 编译产物 ===
+# 目标文件
+*.o
+*.obj
+*.ko
+
+# 编译生成的静态库与动态库
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# 可执行文件
+*.exe
+*.out
+*.app
+
+# 预编译头与调试信息
+*.gch
+*.pch
+*.pdb
+*.ilk
+
+# 依赖与中间文件
+*.d
+*.map
+*.exp
+
+# === 构建系统目录 ===
+# CMake 生成的临时文件
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+build/
+[Bb]uild/
+[Bb]in/
+[Dd]ebug/
+[Rr]elease/
+
+# === VSCode 本地配置 ===
+.vscode/
+.history/
+
+# === 操作系统与通用 ===
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
