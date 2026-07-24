@@ -3,13 +3,7 @@
 
 scene current_scene = DOMITORY;
 
-void setBackground()
+void DrawBackground(Game* ctx)
 {
-    ClearBackground(BLACK);
-    if(current_scene == DOMITORY)
-    {
-        
-        Texture2D bkg_DOM = LoadTexture("resources/back.png");
-        DrawTexture(bkg_DOM,0,0,WHITE);
-    }
+    DrawTexture(ctx->Background,2,2,GREEN);
 }

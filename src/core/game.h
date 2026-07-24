@@ -13,5 +13,7 @@ struct Game{
     Vector2 playerPos;
     Camera2D camera;
 
+    Texture2D Background;
 };
 void InitContext(Game* ctx);
+void InitBackground(Game* ctx);
