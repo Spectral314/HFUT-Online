@@ -13,7 +13,7 @@ class Player : public Character
 
         // Animation Component 运动动画组件
         int currentFrame= 0;  //当前帧（当前动作）
-        int framesCounter= 0;  //帧数  （动作链中的第几个动作）
+        int framesCounter= 0;  //帧数
         int framesSpeed = 8;  //运动速度
 
         state State;

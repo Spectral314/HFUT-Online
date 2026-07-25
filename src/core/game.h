@@ -1,6 +1,7 @@
 //game.h
 #pragma once
 #include "../src/entity/player.h"
+#include "../src/entity/npc.h"
 #include "raylib.h"
 
 struct SmoothCamera{

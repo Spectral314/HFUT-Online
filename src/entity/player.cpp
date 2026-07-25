@@ -15,6 +15,7 @@ void Player::MoveFunction()
     if (IsKeyDown(KEY_W)) {Pos.y-=2;State = MOVE;}
 
     if (State == MOVE){
+        //Action transition (change the Texture Ingr)
         framesCounter++;
         if (framesCounter >= (60/framesSpeed)){
             framesCounter = 0;
