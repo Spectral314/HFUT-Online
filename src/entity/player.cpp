@@ -9,10 +9,10 @@ Player::Player(const char* name, Texture2D Ingredient, Vector2 pos):Character(na
 void Player::MoveFunction()
 {
     State = IDLE;
-    if (IsKeyDown(KEY_A)) {Pos.x--;State = MOVE;Ingr = MoveLeft;}
-    if (IsKeyDown(KEY_D)) {Pos.x++;State = MOVE;Ingr = MoveRight;}
-    if (IsKeyDown(KEY_S)) {Pos.y++;State = MOVE;}
-    if (IsKeyDown(KEY_W)) {Pos.y--;State = MOVE;}
+    if (IsKeyDown(KEY_A)) {Pos.x-=3;State = MOVE;Ingr = MoveLeft;}
+    if (IsKeyDown(KEY_D)) {Pos.x+=3;State = MOVE;Ingr = MoveRight;}
+    if (IsKeyDown(KEY_S)) {Pos.y+=2;State = MOVE;}
+    if (IsKeyDown(KEY_W)) {Pos.y-=2;State = MOVE;}
 
     if (State == MOVE){
         framesCounter++;

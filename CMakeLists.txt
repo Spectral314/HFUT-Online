@@ -15,7 +15,7 @@ FetchContent_MakeAvailable(raylib)
 
 set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
-add_executable(main main.cpp src/core/game.cpp src/scene/scene.cpp src/entity/character.cpp src/entity/player.cpp)
+add_executable(main main.cpp src/core/game.cpp src/scene/scene.cpp src/entity/character.cpp src/entity/player.cpp src/entity/item.cpp)
 
 target_link_libraries(main raylib)
 

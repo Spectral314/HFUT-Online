@@ -3,6 +3,7 @@
 #include "src/entity/character.h"
 #include "src/core/game.h"
 #include "src/scene/scene.h"
+#include "src/entity/item.h"
 
 int main(){
     Game ctx;
@@ -15,7 +16,7 @@ int main(){
 
     SetTargetFPS(60);
     Player MainPlay("MainPlayer",LoadTexture("resources/scarfy/scarfy_right.png"),ctx.playerPos);
-    
+    Item Dish("woc",LoadTexture("resources/dish/Geniusdish1.png"),LoadTexture("resources/dish/Geniusdish2.png"));
     while(!WindowShouldClose()){
         MainPlay.MoveFunction();
         
@@ -23,11 +24,13 @@ int main(){
         ClearBackground(WHITE);
         
         BeginMode2D(ctx.camera);
-        ctx.camera.target = MainPlay.getPlayerPos();
+        ctx.adjustSmoothCamera(&MainPlay);
         DrawBackground(&ctx);
         
         MainPlay.Draw();
         
+        Dish.Draw();
+
         EndMode2D();
         EndDrawing();
     }

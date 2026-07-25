@@ -2,8 +2,25 @@
 #include "game.h"
 #include "../scene/scene.h"
 #include "raylib.h"
+#include "raymath.h"
 
 extern scene current_scene;
+
+void Game::adjustSmoothCamera(Player* player){
+    float dt = GetFrameTime();
+
+    smoothC.currentPos = camera.target;
+    smoothC.targetPos  = player->getPlayerPos();
+    
+    Vector2 delta = smoothC.targetPos - smoothC.currentPos;
+    Vector2 acceleration = delta * smoothC.stiffness;
+
+    smoothC.velocity += acceleration * dt;
+    smoothC.velocity *= smoothC.damping;
+
+    smoothC.currentPos += smoothC.velocity * dt;
+    camera.target = smoothC.currentPos;
+}
 
 void InitContext(Game* ctx){
     ctx -> screenWidth  = 800;
@@ -22,5 +39,5 @@ void InitContext(Game* ctx){
 }
 
 void InitBackground(Game* ctx){
-    ctx -> Background   = LoadTexture("resources/plain.png");
+    ctx -> Background   = LoadTexture("resources/Domitory1.png");
 }

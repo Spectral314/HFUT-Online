@@ -5,5 +5,5 @@ scene current_scene = DOMITORY;
 
 void DrawBackground(Game* ctx)
 {
-    DrawTexture(ctx->Background,2,2,GREEN);
+    DrawTexture(ctx->Background,2,2,WHITE);
 }
